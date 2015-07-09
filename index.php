@@ -32,12 +32,12 @@ $(function(){
             }
         }
     });
-    $('#psP').sortable({
+    $('#cards').sortable({
         placeholder: "ui-state-highlight",
         helper:'clone',
         items:'.sortable'
     });
-    $('#psP').draggable({cursor: "move"});
+    $('#cards').draggable({cursor: "move"});
 });
 
 function populateData(array)
@@ -50,13 +50,13 @@ function populateData(array)
 
 function addCard(OrderNumber, OrderQuantity, Address, PhoneNumber, Payment)
 {
-    $("#psP").append(new Card(OrderNumber, OrderQuantity, Address, PhoneNumber, Payment));
+    $("#cards").append(new Card(OrderNumber, OrderQuantity, Address, PhoneNumber, Payment));
 }
 
 </script>
 <body>
 
-<div id="psP" class="cardContainer">
+<div id="cards" class="cardContainer">
     <img src="styles/images/icn_add.png" title="Add New Card" class="addButton" onclick="addCard()"></img>
 </div>
 
