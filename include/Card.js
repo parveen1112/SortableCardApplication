@@ -22,7 +22,7 @@ OrderNumberList.prototype.remove = function(orderNumber)
     var index = this.get(orderNumber);
     if (index > -1)
     {
-        this.orderNumberList.splice(index);
+        this.orderNumberList.splice(index, 1);
     }
 }
 
@@ -38,6 +38,7 @@ function Card(OrderNumber, OrderQuantity, Address, PhoneNumber, Payment)
     this.card = document.createElement("div");
     this.card.setAttribute("class", "sortable");
     this.card.style.height = "120px";
+    $(this.card).dblclick(this.editCard.bind(this));
     this.removeImage = document.createElement("img");
     this.removeImage.setAttribute("class", "remove");
     this.removeImage.setAttribute("src", "styles/images/icn_remove.png");
@@ -109,13 +110,6 @@ function Card(OrderNumber, OrderQuantity, Address, PhoneNumber, Payment)
     $(this.button).button();
     $(this.button).click(this.save.bind(this));
 
-    this.editImage = document.createElement("img");
-    this.editImage.setAttribute("class", "edit");
-    this.editImage.setAttribute("src", "styles/images/icn_edit.png");
-    $(this.editImage).click(this.editCard.bind(this));
-    this.editImage.setAttribute("title", "Edit Card");
-
-    this.card.appendChild(this.editImage);
     this.card.appendChild(this.removeImage);
     this.card.appendChild(this.orderNumber);
     this.card.appendChild(this.orderQuantity);
