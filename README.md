@@ -1,4 +1,4 @@
-Features of Card Application:
+#Features of Card Application:
 
 1. User can add Cards, remove card and edit cards.
 2. All the fields are need to be filled. According to the Format.{Validation is applied}
@@ -6,17 +6,12 @@ Features of Card Application:
 4. Card Container can be moved anywhere on the page.
 5. User cannot add new card with same Order Number.
 
-Requirements:
+#Requirements:
 MySQL (All the MySQL Commands are used not MySQLi(improved MySQL))
 PHP
 Web Server which support php
 
-TESTED ON:
-Apache 2.2.17
-MySQL 5.5.8 (Community Server)
-PHP 5.3.5 (VC6 X86 32bit) + PEAR 
-
-ABOUT Application:
+#ABOUT Application:
 
 1. include/database.php : This file is used to interact with the MySQL. [Database Layer]
 2. include/Order.php : This file acts as a Controller. It Handles GET and POST Request related to Orders table.
@@ -29,7 +24,7 @@ ABOUT Application:
 Important: Please maintain the directory Structure.
 
 
-How to host the Application:
+#How to host the Application:
 1. CardDatabase.sql is provided with the package. MySQL Script. [Engine: InnoDB]
 2. Copy the Card Folder in the Hosting configured directory. [Default DocumentRoot "C:/xampp/htdocs" on Windows, /var/www/ on Ubuntu]
 3. include/config.json - Please add the necessary parameters in this file.
@@ -40,5 +35,5 @@ How to host the Application:
 4. <Server:port>/Card/index.php 
     [<Folder> where Card folder resides is the configured directory for taking requests]
 
-If you are still not able to run it. Then mail me
-    Parveen Arora - parveen1112@gmail.com
+If you are still not able to run it or wish to contribute. Then mail me
+    Parveen Arora - <a href="mailto:parveen1112@gmail.com">parveen1112@gmail.com</a>
